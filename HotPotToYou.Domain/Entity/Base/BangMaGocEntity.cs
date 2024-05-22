@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HotPotToYou.Domain.Entity.Base
 {
-    public abstract class BangMaGoc 
+    public abstract class BangMaGocEntity 
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace HotPotToYou.Domain.Entity.ConfigTable
 {
     [Table("Role")]
-    public class Role : BangMaGoc
+    public class RoleEntity : BangMaGocEntity
     {
     }
 }

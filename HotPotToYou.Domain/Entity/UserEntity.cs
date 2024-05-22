@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace HotPotToYou.Domain.Entity
 {
     [Table("User")]
-    public class User
+    public class UserEntity
     {
     }
 }

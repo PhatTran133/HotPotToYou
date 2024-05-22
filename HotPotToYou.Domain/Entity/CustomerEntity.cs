@@ -8,19 +8,18 @@ using System.Threading.Tasks;
 
 namespace HotPotToYou.Domain.Entity
 {
-    [Table("User")]
-    public class UserEntity
+    [Table("Customer")]
+    public class CustomerEntity
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int ID { get; set; }
         public string Name { get; set; }
+        public string Address { get; set; }
         public string Email { get; set; }
-        public string Password { get; set; }
-        public string Gender { get; set; }
         public string Phone { get; set; }
+        public string AvatarUrl { get; set; }
+        public DateTime YearOfBirth { get; set; }
+        public string Gender { get; set; }
         public string Status { get; set; }
-        public int RoleID { get; set; }
-
     }
 }

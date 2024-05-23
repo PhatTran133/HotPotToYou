@@ -11,5 +11,6 @@ namespace HotPotToYou.Domain.Entity.ConfigTable
     [Table("IngredientGroup")]
     public class IngredientGroupEntity : BangMaGocEntity
     {
+        public virtual ICollection<IngredientEntity> Ingredient { get; set; }
     }
 }

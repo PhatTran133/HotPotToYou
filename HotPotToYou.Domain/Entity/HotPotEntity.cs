@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotPotToYou.Domain.Entity.ConfigTable;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -22,6 +23,9 @@ namespace HotPotToYou.Domain.Entity
         [Column(TypeName = "decimal(18, 4)")]
         public decimal Price { get; set; }
         public int TypeID { get; set; }
-
+        [ForeignKey(nameof(TypeID))]
+        public virtual HotPotTypeEntity HotPotType { get; set; }
+        public virtual HotPotPackageEntity HotPotPackage { get; set; }
+        public virtual HotPotIngredientEntity HotPotIngredient { get; set; }
     }
 }

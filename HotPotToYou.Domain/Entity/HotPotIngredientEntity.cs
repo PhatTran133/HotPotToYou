@@ -8,22 +8,17 @@ using System.Threading.Tasks;
 
 namespace HotPotToYou.Domain.Entity
 {
-    [Table("HotPotPackage")]
-
-    public class HotPotPackageEntity
+    [Table("HotPotIngredient")]
+    public class HotPotIngredientEntity
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int ID { get; set; }
-        public int OrderId { get; set; }
-        [ForeignKey(nameof(OrderId))]
-        public virtual OrderEntity Order { get; set; }
-        public int HotPotID { get; set; }
-        [ForeignKey(nameof(HotPotID))]
+        public int HotpotID { get; set; }
+        [ForeignKey(nameof(HotpotID))]
         public virtual HotPotEntity HotPot { get; set; }
-        public int Quantity { get; set; }
-
-        [Column(TypeName = "decimal(18, 4)")]
-        public decimal Total {  get; set; }
+        public int IngredientId { get; set; }
+        [ForeignKey(nameof(IngredientId))]
+        public virtual IngredientEntity Ingredient { get; set; }
     }
 }

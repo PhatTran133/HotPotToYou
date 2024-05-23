@@ -9,17 +9,18 @@ using System.Threading.Tasks;
 
 namespace HotPotToYou.Domain.Entity
 {
-    [Table("OrderActivity")]
-    public class OrderActivityEntity
+    [Table("HotPotUtensilType")]
+
+    public class HotPotUtensilTypeEntity
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int ID { get; set; }
-        public int OrderID { get; set; }
-        [ForeignKey(nameof(OrderID))]
-        public virtual OrderEntity Order { get; set; }
-        public int ActivityTypeID { get; set; }
-        [ForeignKey(nameof(ActivityTypeID))]
-        public virtual ActivityTypeEntity ActivityType { get; set; }
+        public int HotPotTypeID { get; set; }
+        [ForeignKey(nameof(HotPotTypeID))]
+        public virtual HotPotTypeEntity HotPotType { get; set; }
+        public int UtensilID { get; set; }
+        [ForeignKey(nameof(UtensilID))]
+        public virtual UtensilEntity Utensil { get; set; }
     }
 }

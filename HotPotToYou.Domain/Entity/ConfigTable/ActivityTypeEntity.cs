@@ -11,5 +11,6 @@ namespace HotPotToYou.Domain.Entity.ConfigTable
     [Table("ActivityType")]
     public class ActivityTypeEntity : BangMaGocEntity
     {
+        public virtual OrderActivityEntity OrderActivity { get; set; }
     }
 }

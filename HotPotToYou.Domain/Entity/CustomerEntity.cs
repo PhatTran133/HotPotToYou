@@ -20,6 +20,9 @@ namespace HotPotToYou.Domain.Entity
         public string AvatarUrl { get; set; }
         public DateTime YearOfBirth { get; set; }
         public string Gender { get; set; }
-        public string Status { get; set; }
+        public bool Status { get; set; }
+
+        public virtual UserEntity User { get; set; }
+        public virtual OrderEntity Order { get; set; }
     }
 }

@@ -11,5 +11,6 @@ namespace HotPotToYou.Domain.Entity.ConfigTable
     [Table("Payment")]
     public class PaymentEntity:BangMaGocEntity
     {
+        public virtual ICollection<OrderEntity> Order { get; set; }
     }
 }

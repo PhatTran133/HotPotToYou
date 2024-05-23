@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace HotPotToYou.Domain.Entity.ConfigTable
 {
-    [Table("ActivityType")]
-    public class ActivityTypeEntity : BangMaGocEntity
+    [Table("Payment")]
+    public class PaymentEntity:BangMaGocEntity
     {
-        public virtual OrderActivityEntity OrderActivity { get; set; }
+        public virtual ICollection<OrderEntity> Order { get; set; }
     }
 }

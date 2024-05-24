@@ -11,5 +11,7 @@ namespace HotPotToYou.Domain.Entity.ConfigTable
     [Table("HotPotType")]
     public class HotPotTypeEntity:BangMaGocEntity
     {
+        public virtual ICollection<HotPotEntity> HotPot { get; set; }
+        public virtual HotPotUtensilTypeEntity HotPotUtensilType { get; set; }
     }
 }

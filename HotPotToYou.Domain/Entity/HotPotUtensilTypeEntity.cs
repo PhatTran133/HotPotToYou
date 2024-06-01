@@ -1,4 +1,5 @@
-﻿using HotPotToYou.Domain.Entity.ConfigTable;
+﻿using HotPotToYou.Domain.Entity.Base;
+using HotPotToYou.Domain.Entity.ConfigTable;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,7 +12,7 @@ namespace HotPotToYou.Domain.Entity
 {
     [Table("HotPotUtensilType")]
 
-    public class HotPotUtensilTypeEntity
+    public class HotPotUtensilTypeEntity : EntityBase
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]

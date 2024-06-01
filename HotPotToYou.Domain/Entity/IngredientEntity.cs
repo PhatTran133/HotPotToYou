@@ -6,11 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HotPotToYou.Domain.Entity.ConfigTable;
+using HotPotToYou.Domain.Entity.Base;
 
 namespace HotPotToYou.Domain.Entity
 {
     [Table("Ingredient")]
-    public class IngredientEntity
+    public class IngredientEntity : EntityBase
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]

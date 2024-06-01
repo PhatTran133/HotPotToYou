@@ -1,4 +1,5 @@
-﻿using HotPotToYou.Domain.Entity;
+﻿using HotPotToYou.Domain.Common.Interfaces;
+using HotPotToYou.Domain.Entity;
 using HotPotToYou.Domain.Entity.ConfigTable;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace HotPotToYou.Infrastructure
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext, IUnitOfWork
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {

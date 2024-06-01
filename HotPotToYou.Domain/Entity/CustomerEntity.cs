@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotPotToYou.Domain.Entity.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 namespace HotPotToYou.Domain.Entity
 {
     [Table("Customer")]
-    public class CustomerEntity
+    public class CustomerEntity : EntityBase
     {
         [Key]
         public int ID { get; set; }

@@ -24,13 +24,13 @@ namespace HotPotToYou.Application.Role.CreateRole
             if (checkDuplication)
                 throw new DuplicationException("Role is existing");
 
-            var donViCongTac = new RoleEntity()
+            var role = new RoleEntity()
             {
                 Name = request.Name,
                 //CreateByID = _currentUserService.UserId,
                 CreateDate = DateTime.Now
             };
-            _roleRepository.Add(donViCongTac);
+            _roleRepository.Add(role);
             if (await _roleRepository.UnitOfWork.SaveChangesAsync(cancellationToken) > 0)
                 return "Create Successfully";
             else

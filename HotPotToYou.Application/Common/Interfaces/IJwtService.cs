@@ -8,6 +8,6 @@ namespace HotPotToYou.Application.Common.Interfaces
 {
     public interface IJwtService
     {
-        string CreateToken(string ID, string roles);
+        string CreateToken(int ID, string roles);
     }
 }

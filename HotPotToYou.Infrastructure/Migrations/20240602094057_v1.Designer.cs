@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotPotToYou.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240523075437_v1")]
+    [Migration("20240602094057_v1")]
     partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,9 +32,27 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ID");
 
@@ -49,9 +67,27 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ID");
 
@@ -66,9 +102,27 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ID");
 
@@ -83,9 +137,27 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ID");
 
@@ -100,9 +172,27 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ID");
 
@@ -125,6 +215,18 @@ namespace HotPotToYou.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -144,10 +246,22 @@ namespace HotPotToYou.Infrastructure.Migrations
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("YearOfBirth")
                         .HasColumnType("datetime2");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("UserID")
+                        .IsUnique();
 
                     b.ToTable("Customer");
                 });
@@ -159,6 +273,18 @@ namespace HotPotToYou.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -182,6 +308,12 @@ namespace HotPotToYou.Infrastructure.Migrations
                     b.Property<int>("TypeID")
                         .HasColumnType("int");
 
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("ID");
 
                     b.HasIndex("TypeID");
@@ -197,11 +329,29 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("HotpotID")
                         .HasColumnType("int");
 
                     b.Property<int>("IngredientId")
                         .HasColumnType("int");
+
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ID");
 
@@ -222,6 +372,18 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("HotPotID")
                         .HasColumnType("int");
 
@@ -233,6 +395,12 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     b.Property<decimal>("Total")
                         .HasColumnType("decimal(18,4)");
+
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ID");
 
@@ -253,8 +421,26 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("HotPotTypeID")
                         .HasColumnType("int");
+
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("UtensilID")
                         .HasColumnType("int");
@@ -278,12 +464,30 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("GroupID")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ID");
 
@@ -303,8 +507,26 @@ namespace HotPotToYou.Infrastructure.Migrations
                     b.Property<int>("ActivityTypeID")
                         .HasColumnType("int");
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("OrderID")
                         .HasColumnType("int");
+
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ID");
 
@@ -329,8 +551,20 @@ namespace HotPotToYou.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("CustomerID")
                         .HasColumnType("int");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("PaymentID")
                         .HasColumnType("int");
@@ -347,6 +581,12 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     b.Property<decimal>("TotalPrice")
                         .HasColumnType("decimal(18,4)");
+
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("ID");
 
@@ -366,6 +606,18 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("OrderID")
                         .HasColumnType("int");
 
@@ -375,12 +627,24 @@ namespace HotPotToYou.Infrastructure.Migrations
                     b.Property<decimal>("Total")
                         .HasColumnType("decimal(18,4)");
 
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UtensilID")
+                        .HasColumnType("int");
+
                     b.Property<int>("UtensilPackageID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
 
                     b.HasIndex("OrderID")
+                        .IsUnique();
+
+                    b.HasIndex("UtensilID")
                         .IsUnique();
 
                     b.HasIndex("UtensilPackageID")
@@ -394,6 +658,20 @@ namespace HotPotToYou.Infrastructure.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -422,6 +700,12 @@ namespace HotPotToYou.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("ID");
 
                     b.HasIndex("RoleID");
@@ -437,8 +721,26 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("PackageID")
                         .HasColumnType("int");
+
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("UtensilID")
                         .HasColumnType("int");
@@ -462,6 +764,18 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Material")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -476,6 +790,12 @@ namespace HotPotToYou.Infrastructure.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("ID");
 
                     b.ToTable("Utensil");
@@ -489,15 +809,44 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
+                    b.Property<string>("CreateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeleteByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeleteDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("MaxPeople")
                         .HasColumnType("int");
 
                     b.Property<int>("MinPeople")
                         .HasColumnType("int");
 
+                    b.Property<string>("UpdateByID")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("ID");
 
                     b.ToTable("UntensilPackage");
+                });
+
+            modelBuilder.Entity("HotPotToYou.Domain.Entity.CustomerEntity", b =>
+                {
+                    b.HasOne("HotPotToYou.Domain.Entity.UserEntity", "User")
+                        .WithOne("Customer")
+                        .HasForeignKey("HotPotToYou.Domain.Entity.CustomerEntity", "UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("HotPotToYou.Domain.Entity.HotPotEntity", b =>
@@ -625,6 +974,12 @@ namespace HotPotToYou.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("HotPotToYou.Domain.Entity.UtensilEntity", "Utensil")
+                        .WithOne("OrderUtensil")
+                        .HasForeignKey("HotPotToYou.Domain.Entity.OrderUtensilEntity", "UtensilID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("HotPotToYou.Domain.Entity.UtensilPackageEntity", "UtensilPackage")
                         .WithOne("OrderUtensil")
                         .HasForeignKey("HotPotToYou.Domain.Entity.OrderUtensilEntity", "UtensilPackageID")
@@ -633,24 +988,18 @@ namespace HotPotToYou.Infrastructure.Migrations
 
                     b.Navigation("Order");
 
+                    b.Navigation("Utensil");
+
                     b.Navigation("UtensilPackage");
                 });
 
             modelBuilder.Entity("HotPotToYou.Domain.Entity.UserEntity", b =>
                 {
-                    b.HasOne("HotPotToYou.Domain.Entity.CustomerEntity", "Customer")
-                        .WithOne("User")
-                        .HasForeignKey("HotPotToYou.Domain.Entity.UserEntity", "ID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("HotPotToYou.Domain.Entity.ConfigTable.RoleEntity", "Role")
                         .WithMany()
                         .HasForeignKey("RoleID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Customer");
 
                     b.Navigation("Role");
                 });
@@ -702,9 +1051,6 @@ namespace HotPotToYou.Infrastructure.Migrations
                 {
                     b.Navigation("Order")
                         .IsRequired();
-
-                    b.Navigation("User")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("HotPotToYou.Domain.Entity.HotPotEntity", b =>
@@ -734,9 +1080,18 @@ namespace HotPotToYou.Infrastructure.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("HotPotToYou.Domain.Entity.UserEntity", b =>
+                {
+                    b.Navigation("Customer")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("HotPotToYou.Domain.Entity.UtensilEntity", b =>
                 {
                     b.Navigation("HotPotUtensilType")
+                        .IsRequired();
+
+                    b.Navigation("OrderUtensil")
                         .IsRequired();
 
                     b.Navigation("UtensilDetail")

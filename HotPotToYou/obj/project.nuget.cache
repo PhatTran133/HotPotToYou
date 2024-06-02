@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ua+E/GVv4pPTzyXC7mL9/y4XJkWuL3X8u+5uzBGhYEqI5w7kf4ocw0qM75w5na4GAwrbpE4DBs5tWLqIrhrOaQ==",
+  "dgSpecHash": "NiExs7TQ3FZAmcU1tsybQjw40bgNQ4uCZWCq/h1IKgWSWg34NBCexa4GdHfnyPj0RpJFdq7fdQwWPfYKzpAE8Q==",
   "success": true,
   "projectFilePath": "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\pc\\.nuget\\packages\\asp.versioning.mvc.apiexplorer\\6.0.0\\asp.versioning.mvc.apiexplorer.6.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\fluentvalidation\\11.9.1\\fluentvalidation.11.9.1.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.1\\fluentvalidation.dependencyinjectionextensions.11.9.1.nupkg.sha512",

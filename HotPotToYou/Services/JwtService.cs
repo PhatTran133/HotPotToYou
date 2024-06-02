@@ -8,12 +8,12 @@ namespace HotPotToYou.Services
 {
     public class JwtService : IJwtService
     {
-        public string CreateToken(string ID, string roles)
+        public string CreateToken(int ID, string roles)
         {
             var claims = new List<Claim>
             {
 
-                new(JwtRegisteredClaimNames.Sub, ID),
+                new(JwtRegisteredClaimNames.Sub, ID.ToString()),
                 new(ClaimTypes.Role, roles)
             };
 

@@ -250,10 +250,16 @@ namespace HotPotToYou.Infrastructure.Migrations
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("YearOfBirth")
                         .HasColumnType("datetime2");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("UserID")
+                        .IsUnique();
 
                     b.ToTable("Customer");
                 });
@@ -651,6 +657,8 @@ namespace HotPotToYou.Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
                     b.Property<string>("CreateByID")
                         .HasColumnType("nvarchar(max)");
 
@@ -828,6 +836,17 @@ namespace HotPotToYou.Infrastructure.Migrations
                     b.ToTable("UntensilPackage");
                 });
 
+            modelBuilder.Entity("HotPotToYou.Domain.Entity.CustomerEntity", b =>
+                {
+                    b.HasOne("HotPotToYou.Domain.Entity.UserEntity", "User")
+                        .WithOne("Customer")
+                        .HasForeignKey("HotPotToYou.Domain.Entity.CustomerEntity", "UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("HotPotToYou.Domain.Entity.HotPotEntity", b =>
                 {
                     b.HasOne("HotPotToYou.Domain.Entity.ConfigTable.HotPotTypeEntity", "HotPotType")
@@ -974,19 +993,11 @@ namespace HotPotToYou.Infrastructure.Migrations
 
             modelBuilder.Entity("HotPotToYou.Domain.Entity.UserEntity", b =>
                 {
-                    b.HasOne("HotPotToYou.Domain.Entity.CustomerEntity", "Customer")
-                        .WithOne("User")
-                        .HasForeignKey("HotPotToYou.Domain.Entity.UserEntity", "ID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("HotPotToYou.Domain.Entity.ConfigTable.RoleEntity", "Role")
                         .WithMany()
                         .HasForeignKey("RoleID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Customer");
 
                     b.Navigation("Role");
                 });
@@ -1038,9 +1049,6 @@ namespace HotPotToYou.Infrastructure.Migrations
                 {
                     b.Navigation("Order")
                         .IsRequired();
-
-                    b.Navigation("User")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("HotPotToYou.Domain.Entity.HotPotEntity", b =>
@@ -1067,6 +1075,12 @@ namespace HotPotToYou.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("OrderUtensil")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("HotPotToYou.Domain.Entity.UserEntity", b =>
+                {
+                    b.Navigation("Customer")
                         .IsRequired();
                 });
 

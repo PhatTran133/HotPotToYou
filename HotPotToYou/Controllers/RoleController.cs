@@ -1,14 +1,15 @@
 ﻿using HotPotToYou.Application.Role.CreateRole;
 using HotPotToYou.Controllers.ResponseType;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mime;
 
 namespace HotPotToYou.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class RoleController : ControllerBase
     {
         private readonly ISender _mediator;

@@ -22,7 +22,8 @@ namespace HotPotToYou.Domain.Entity
         public DateTime YearOfBirth { get; set; }
         public string Gender { get; set; }
         public bool Status { get; set; }
-
+        public int UserID { get; set; }
+        [ForeignKey(nameof(UserID))]
         public virtual UserEntity User { get; set; }
         public virtual OrderEntity Order { get; set; }
     }

@@ -1,5 +1,6 @@
 ﻿using HotPotToYou.Domain.Common.Interfaces;
 using HotPotToYou.Domain.Repositories.ConfigTable;
+using HotPotToYou.Domain.Repositories.Table;
 using HotPotToYou.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -29,7 +30,8 @@ namespace HotPotToYou.Infrastructure
             });
 
             services.AddScoped<IUnitOfWork>(provider => provider.GetRequiredService<ApplicationDbContext>());
-            services.AddScoped<IRoleRepository, RoleRepository>();
+            services.AddTransient<IRoleRepository, RoleRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
 
             return services;
         }

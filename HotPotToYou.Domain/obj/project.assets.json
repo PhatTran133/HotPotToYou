@@ -1912,11 +1912,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWD392\\BE\\HotPotToYou\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj",
       "projectName": "HotPotToYou.Domain",
-      "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj",
+      "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWD392\\BE\\HotPotToYou\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Domain\\obj\\",
+      "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWD392\\BE\\HotPotToYou\\HotPotToYou\\HotPotToYou.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

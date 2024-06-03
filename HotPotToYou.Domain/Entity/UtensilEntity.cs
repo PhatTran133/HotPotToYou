@@ -1,4 +1,5 @@
-﻿using HotPotToYou.Domain.Entity.ConfigTable;
+﻿using HotPotToYou.Domain.Entity.Base;
+using HotPotToYou.Domain.Entity.ConfigTable;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 namespace HotPotToYou.Domain.Entity
 {
     [Table("Utensil")]
-    public class UtensilEntity
+    public class UtensilEntity : EntityBase
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
@@ -25,5 +26,6 @@ namespace HotPotToYou.Domain.Entity
 
         public virtual HotPotUtensilTypeEntity HotPotUtensilType { get; set; }
         public virtual UtensilDetailEntity UtensilDetail { get; set; }
+        public virtual OrderUtensilEntity OrderUtensil { get; set; }
     }
 }

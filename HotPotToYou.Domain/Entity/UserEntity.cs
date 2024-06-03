@@ -1,4 +1,5 @@
-﻿using HotPotToYou.Domain.Entity.ConfigTable;
+﻿using HotPotToYou.Domain.Entity.Base;
+using HotPotToYou.Domain.Entity.ConfigTable;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,13 +11,11 @@ using System.Threading.Tasks;
 namespace HotPotToYou.Domain.Entity
 {
     [Table("User")]
-    public class UserEntity
+    public class UserEntity : EntityBase
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        [ForeignKey(nameof(Customer))]
-        public int ID { get; set; }
-
+        public int ID { get; set; } 
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }

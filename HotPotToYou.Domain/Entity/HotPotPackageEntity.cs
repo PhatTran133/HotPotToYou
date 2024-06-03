@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotPotToYou.Domain.Entity.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,7 +11,7 @@ namespace HotPotToYou.Domain.Entity
 {
     [Table("HotPotPackage")]
 
-    public class HotPotPackageEntity
+    public class HotPotPackageEntity : EntityBase
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]

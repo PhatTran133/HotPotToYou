@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using HotPotToYou.Domain.Common.Interfaces;
+using HotPotToYou.Domain.Repositories.ConfigTable;
+using HotPotToYou.Domain.Repositories.Table;
+using HotPotToYou.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -25,9 +29,9 @@ namespace HotPotToYou.Infrastructure
                 options.UseLazyLoadingProxies();
             });
 
-
-
-            //services.AddTransient<RoleRepository, RoleRepository>();
+            services.AddScoped<IUnitOfWork>(provider => provider.GetRequiredService<ApplicationDbContext>());
+            services.AddTransient<IRoleRepository, RoleRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
 
             return services;
         }

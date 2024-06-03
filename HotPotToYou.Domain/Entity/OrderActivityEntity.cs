@@ -1,4 +1,5 @@
-﻿using HotPotToYou.Domain.Entity.ConfigTable;
+﻿using HotPotToYou.Domain.Entity.Base;
+using HotPotToYou.Domain.Entity.ConfigTable;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 namespace HotPotToYou.Domain.Entity
 {
     [Table("OrderActivity")]
-    public class OrderActivityEntity
+    public class OrderActivityEntity : EntityBase
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]

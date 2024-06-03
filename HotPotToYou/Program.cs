@@ -59,6 +59,15 @@ if (app.Environment.IsDevelopment())
         //c.RoutePrefix = string.Empty;
     });
 }
+else
+{
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "HotPotToYou API V1");
+        c.RoutePrefix = string.Empty;
+    });
+}
 
 app.UseHttpsRedirection();
 app.UseAuthentication();

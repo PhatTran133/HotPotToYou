@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.csproj": {}
+    "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou\\HotPotToYou.csproj": {}
   },
   "projects": {
-    "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj",
         "projectName": "HotPotToYou.Domain",
-        "projectPath": "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou.Domain\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -65,21 +70,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou.Infrastructure\\HotPotToYou.Infrastructure.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Infrastructure\\HotPotToYou.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou.Infrastructure\\HotPotToYou.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Infrastructure\\HotPotToYou.Infrastructure.csproj",
         "projectName": "HotPotToYou.Infrastructure",
-        "projectPath": "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou.Infrastructure\\HotPotToYou.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Infrastructure\\HotPotToYou.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,8 +98,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj": {
-                "projectPath": "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj"
+              "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj": {
+                "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Domain\\HotPotToYou.Domain.csproj"
               }
             }
           }
@@ -103,6 +108,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -158,21 +168,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou\\HotPotToYou.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou\\HotPotToYou.csproj",
         "projectName": "HotPotToYou",
-        "projectPath": "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.csproj",
-        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-        "outputPath": "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou\\HotPotToYou.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -186,8 +196,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou.Infrastructure\\HotPotToYou.Infrastructure.csproj": {
-                "projectPath": "D:\\Project C#\\SWD392\\HotPotToYou\\HotPotToYou.Infrastructure\\HotPotToYou.Infrastructure.csproj"
+              "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Infrastructure\\HotPotToYou.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\ADMIN\\Desktop\\SWD392\\HotPotToYou\\HotPotToYou\\HotPotToYou.Infrastructure\\HotPotToYou.Infrastructure.csproj"
               }
             }
           }
@@ -196,6 +206,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -232,7 +247,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

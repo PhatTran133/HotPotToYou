@@ -2,6 +2,7 @@
 using HotPotToYou.Domain.Common.Exceptions;
 using HotPotToYou.Domain.Entity;
 using HotPotToYou.Domain.Entity.ConfigTable;
+using HotPotToYou.Domain.Repositories;
 using HotPotToYou.Domain.Repositories.ConfigTable;
 using HotPotToYou.Domain.Repositories.Table;
 using MediatR;
@@ -30,12 +31,12 @@ namespace HotPotToYou.Application.User.CreateUser
             if (checkPhone)
                 throw new DuplicationException("Phone is existing");
 
-
+            var hashedPassword = _userRepository.HashPassword(request.Password);
             var user = new UserEntity()
             {
                 Name = request.Name,
                 Email = request.Email,
-                Password = request.Password,
+                Password = hashedPassword,
                 Gender = request.Gender,
                 Phone = request.Phone,
                 Status = "Active",

@@ -1,4 +1,5 @@
-﻿using HotPotToYou.Domain.Common.Exceptions;
+﻿using HotPotToYou.Application.Common.Interfaces;
+using HotPotToYou.Domain.Common.Exceptions;
 using HotPotToYou.Domain.Entity.ConfigTable;
 using HotPotToYou.Domain.Repositories.ConfigTable;
 using MediatR;
@@ -13,9 +14,11 @@ namespace HotPotToYou.Application.Role.CreateRole
     public class CreateRoleCommandHandler : IRequestHandler<CreateRoleCommand, string>
     {
         private readonly IRoleRepository _roleRepository;
-        public CreateRoleCommandHandler(IRoleRepository roleRepository)
+        private readonly ICurrentUserService _currentUserService;
+        public CreateRoleCommandHandler(IRoleRepository roleRepository, ICurrentUserService currentUserService)
         {
             _roleRepository = roleRepository;
+            _currentUserService = currentUserService;
         }
         public async Task<string> Handle(CreateRoleCommand request, CancellationToken cancellationToken)
         {
@@ -27,7 +30,7 @@ namespace HotPotToYou.Application.Role.CreateRole
             var role = new RoleEntity()
             {
                 Name = request.Name,
-                //CreateByID = _currentUserService.UserId,
+                CreateByID = _currentUserService.UserId,
                 CreateDate = DateTime.Now
             };
             _roleRepository.Add(role);

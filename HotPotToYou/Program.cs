@@ -13,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication(builder.Configuration);
+builder.Services.ConfigureApplicationSecurity(builder.Configuration);
 
 // Configure Swagger
 builder.Services.AddSwaggerGen(options =>
@@ -43,7 +44,16 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-builder.Services.ConfigureApplicationSecurity(builder.Configuration);
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        builder =>
+        {
+            builder.WithOrigins("*")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+        });
+});
 
 // Build the app
 var app = builder.Build();

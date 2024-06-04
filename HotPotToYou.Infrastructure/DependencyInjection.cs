@@ -20,7 +20,7 @@ namespace HotPotToYou.Infrastructure
             services.AddDbContext<ApplicationDbContext>(options =>
             {
                 options.UseSqlServer(
-                    configuration.GetConnectionString("Server"),
+                    configuration.GetConnectionString("local"),
                     b =>
                     {
                         b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName);

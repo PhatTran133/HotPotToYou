@@ -19,7 +19,7 @@ namespace HotPotToYou.Services
 
 
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("HRM Nh@ M@y Th3p!!!"));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("H0t P0t T0 Y0u!!!"));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(

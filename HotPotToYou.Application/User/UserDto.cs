@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HotPotToYou.Application.Common.Mapping;
 using HotPotToYou.Application.Role;
 using HotPotToYou.Domain.Entity;
 using HotPotToYou.Domain.Entity.ConfigTable;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace HotPotToYou.Application.User
 {
-    public class UserDto
+    public class UserDto : IMapFrom<UserEntity>
     {
         public UserDto()
         {

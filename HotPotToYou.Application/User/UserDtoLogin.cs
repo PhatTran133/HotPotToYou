@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using HotPotToYou.Application.Common.Mapping;
 using HotPotToYou.Domain.Entity;
+using HotPotToYou.Domain.Entity.ConfigTable;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HotPotToYou.Application.User
 {
-    public class UserDtoLogin
+    public class UserDtoLogin : IMapFrom<LoginEntity>
     {
 
         public string Email { get; set; }

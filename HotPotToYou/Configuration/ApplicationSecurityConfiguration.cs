@@ -34,7 +34,7 @@ namespace HotPotToYou.Configuration
                         ValidateLifetime = true,
                         ValidIssuer = configuration.GetSection("Security.Bearer:Authority").Get<string>(),
                         ValidAudience = configuration.GetSection("Security.Bearer:Audience").Get<string>(),
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("HRM Nh@ M@y Th3p!!!")),
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("H0t P0t T0 Y0u!!!")),
                     };
                 });
 
